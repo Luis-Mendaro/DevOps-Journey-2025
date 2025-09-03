@@ -16,13 +16,26 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+       
 
     steps:
-    - uses: actions/checkout@v5
+    - name: Checkout repo
+      uses: actions/checkout@v5
+
+    - name: Setup Node
+      uses: actions/setup-node@v5
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: "npm"
+
     - name: 'Hello World'
-      run: echo "Hello World" 
-    - name: "Decime la fecha"
+      run: echo "Hello World, esto es un workflow de prueba." 
+
+    - name: "Mostrar la fecha"
       run: date
-    - name: Mostrar contenido 
+
+    - name: Mostrar contenido del repo
       run: ls -la
+
+    - name: Simular instalacion Node
+      run: npm install --dry-run

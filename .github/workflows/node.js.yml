@@ -19,6 +19,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - uses: actions/checkout@v5
     - name: 'Hello World'
       run: echo "Hello World" 
     - name: "Decime la fecha"

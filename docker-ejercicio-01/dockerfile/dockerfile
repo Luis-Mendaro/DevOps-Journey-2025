@@ -1,0 +1,8 @@
+# Imagen base de Nginx
+FROM nginx:latest
+
+# Exponemos el puerto 80
+EXPOSE 80
+
+# Comando por defecto para iniciar Nginx
+CMD ["nginx", "-g", "daemon off;"]

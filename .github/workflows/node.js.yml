@@ -29,13 +29,14 @@ jobs:
       - name: Simular instalacion Node
         run: npm install --dry-run
 
-explore-variables:
+  explore-variables:
     runs-on: ubuntu-latest
     steps:
       - name: Imprimir una variable de entorno simple
         env:
           NOMBRE_USUARIO: "DevOps-Journey"
         run: echo "El nombre de usuario es ${{ env.NOMBRE_USUARIO }}"
-
-      - name: Imprimir un secreto (el valor será oculto)
-        run: echo "Mi secreto es: ${{ secrets.CLAVE_API }}"
+      
+      - name: Imprimir un secreto (el valor sera oculto) 
+        run: echo "Mi secreto es  ${{ secrets.NOMBRE_USUARIO }}"
+      

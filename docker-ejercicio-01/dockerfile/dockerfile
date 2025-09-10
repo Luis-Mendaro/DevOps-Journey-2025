@@ -6,3 +6,5 @@ EXPOSE 80
 
 # Comando por defecto para iniciar Nginx
 CMD ["nginx", "-g", "daemon off;"]
+
+COPY ./dist /usr/share/nginx/html

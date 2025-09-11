@@ -1,8 +1,14 @@
 # Imagen base de Nginx
 FROM nginx:latest
 
+# Definimos el usuario que va a correr el servidor
+USER root
+
 # Exponemos el puerto 80
 EXPOSE 80
+
+# Copiamos nuestro archivo index.html al contenedor
+COPY index.html /usr/share/nginx/html/index.html
 
 # Comando por defecto para iniciar Nginx
 CMD ["nginx", "-g", "daemon off;"]

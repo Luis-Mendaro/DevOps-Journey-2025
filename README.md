@@ -55,6 +55,16 @@ Cada fase representa una capa funcional del sistema:
 
 > ⚠️ Este sistema no es una app final, sino una infraestructura personal de estudio técnico automatizado.
 
+📂 Estructura del repositorio
+
+- `fase-1-react/` – Interfaz técnica modular con componentes funcionales
+- `fase-2-docker/` – Encapsulamiento y despliegue local con Docker
+- `fase-3-ci-cd/` – Automatización de pruebas y actualizaciones
+- `fase-4-automatizacion/` – Generación de contenido técnico y flujos inteligentes
+- `roadmap.md` – Plan de estudio técnico 2025
+
+
+
 ---
 
 ### 📚 Formación complementaria
